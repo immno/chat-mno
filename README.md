@@ -4,16 +4,12 @@
 
 ```sh
 npm install
+cargo install tauri-cli
 ```
 
-### Compile and Hot-Reload for Development
+## Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+cd src-tauri
+cargo tauri dev
 ```
