@@ -41,9 +41,13 @@
       "shortDescription": "",
       "targets": "all",
       "windows": {
+        "tsp": false,
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "timestampUrl": "",
+        "webviewInstallMode": {
+          "type": "embedBootstrapper"
+        }
       }
     },
     "security": {
