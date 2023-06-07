@@ -1,12 +1,12 @@
 {
   "build": {
-    "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
     "devPath": "http://localhost:8080",
-    "distDir": "../dist"
+    "distDir": "../build"
   },
   "package": {
-    "productName": "chatmno",
+    "productName": "chat-mno",
     "version": "0.1.0"
   },
   "tauri": {

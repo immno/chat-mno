@@ -1,20 +1,38 @@
 {
   "name": "chat-mno",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "tauri": "tauri",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "set BROWSER=none && set PORT=8080 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   },
   "dependencies": {
-    "vue": "^3.3.2",
-    "vue-router": "^4.2.2"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.3.1",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.3.5"
+    "@types/node": "^18.7.11",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.7.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
