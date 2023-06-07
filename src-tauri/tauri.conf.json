@@ -6,12 +6,16 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "chat-mno",
+    "productName": "chatmno",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
       "all": false
+    },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
     },
     "bundle": {
       "active": true,
@@ -58,11 +62,16 @@
     },
     "windows": [
       {
+        "label": "main",
+        "title": "Chat MNO",
+        "height": 570,
+        "width": 910,
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
-        "title": "chat-mno",
-        "width": 800
+        "center": true,
+        "focus": true,
+        "decorations": true,
+        "transparent": false
       }
     ]
   }
