@@ -7,8 +7,6 @@ on:
 
 jobs:
   build-chatmno:
-    permissions:
-      contents: write
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -90,6 +88,8 @@ jobs:
             ./src-tauri/target/${{ matrix.target }}/release/bundle/msi/**
 
   release-chatmno:
+    permissions:
+      contents: write
     needs: build-chatmno
     runs-on: ubuntu-latest
     steps:
