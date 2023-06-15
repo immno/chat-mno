@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "ChatMNO",
-    "version": "0.1.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -64,8 +64,8 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.immno.dev",
-      "longDescription": "",
+      "identifier": "com.immno.chat",
+      "longDescription": "ChatMNO Desktop Application",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
