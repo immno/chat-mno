@@ -6,12 +6,44 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "chat-mno",
+    "productName": "ChatMNO",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "globalShortcut": {
+        "all": true
+      },
+      "shell": {
+        "all": true
+      },
+      "fs": {
+        "all": false,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "createDir": true,
+        "exists": true,
+        "removeFile": true,
+        "removeDir": true,
+        "scope": [
+          "$HOME/.chatmno/**",
+          "$DOWNLOAD/**"
+        ]
+      },
+      "path": {
+        "all": true
+      },
+      "os": {
+        "all": true
+      },
+      "process": {
+        "all": true,
+        "exit": true,
+        "relaunch": true,
+        "relaunchDangerousAllowSymlinkMacos": true
+      }
     },
     "systemTray": {
       "iconPath": "icons/icon.png",
