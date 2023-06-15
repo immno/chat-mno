@@ -63,7 +63,7 @@ jobs:
       - name: Install rust target
         run: rustup target add ${{ matrix.target }}
 
-      - run: npm run tauri build --target ${{ matrix.target }}
+      - run: npm run tauri build -- --target ${{ matrix.target }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
