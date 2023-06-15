@@ -46,10 +46,9 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.target }}
-          workspaces: './src-tauri -> target'
       - uses: Swatinem/rust-cache@v2
         with:
-          key: ${{ matrix.target }}        
+          key: ${{ matrix.target }}
 
       - name: Install dependencies (ubuntu only)
         if: matrix.os == 'ubuntu-latest'
@@ -72,24 +71,23 @@ jobs:
         with:
           name: artifacts-${{ matrix.arch }}
           path: |
-            ./target/${{ matrix.target }}/release/bundle/appimage/**.AppImage.*
-            ./target/${{ matrix.target }}/release/bundle/deb/**.deb
+            ./src-tauri/target/${{ matrix.target }}/release/bundle/appimage/**.AppImage.*
+            ./src-tauri/target/${{ matrix.target }}/release/bundle/deb/**.deb
 
       - uses: actions/upload-artifact@v3
         if: matrix.os == 'macos-latest'
         with:
           name: artifacts-${{ matrix.arch }}
           path: |
-            ./target/${{ matrix.target }}/release/bundle/dmg/**.dmg
-            ./target/${{ matrix.target }}/release/bundle/macos/**.app.*
+            ./src-tauri/target/${{ matrix.target }}/release/bundle/dmg/**.dmg
+            ./src-tauri/target/${{ matrix.target }}/release/bundle/macos/**.app.*
 
       - uses: actions/upload-artifact@v3
         if: matrix.os == 'windows-latest'
         with:
           name: artifacts-${{ matrix.arch }}
           path: |
-            ./target/${{ matrix.target }}/release/bundle/msi/**
-
+            ./src-tauri/target/${{ matrix.target }}/release/bundle/msi/**
 
   release-chatmno:
     needs: build-chatmno
